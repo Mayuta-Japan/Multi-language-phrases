@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>多言語学習ライブラリー（新バージョン）</title>
+  <title>多言語学習ライブラリー　日本の地理情報</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   <style>
     .subtitle {
@@ -12,10 +12,16 @@
       margin-top: -10px;
       margin-bottom: 30px;
     }
+    .title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
-  <h1 style="text-align:center;">多言語学習ライブラリー（新バージョン）</h1>
+  <div class="title">多言語学習ライブラリー　日本の地理情報</div>
+  <div class="title">Multi-Language-Learning Library Japan's Geography</div>
   <div class="subtitle">created by Mayuta</div>
 
   <label for="grammarSelect">セクションを選ぶ / Choose a section:</label>
@@ -112,7 +118,7 @@
         q.innerHTML = `(${idx + 1}) ${row[idx1]} / ${row[idx2]}`;
         outputDiv.appendChild(q);
 
-        const fileNum = ("00" + row[2]).slice(-3); // C列＝例文番号
+        const fileNum = row[2]; // C列（例文番号）
         const code1 = getLangCode(lang1);
         const code2 = getLangCode(lang2);
 
